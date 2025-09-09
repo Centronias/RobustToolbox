@@ -11,7 +11,7 @@ using Robust.Shared.Serialization.Manager;
 namespace Robust.Client.GameObjects
 {
     [UsedImplicitly]
-    public sealed class AppearanceSystem : SharedAppearanceSystem
+    public sealed partial class AppearanceSystem : SharedAppearanceSystem
     {
         private readonly Queue<(EntityUid uid, AppearanceComponent)> _queuedUpdates = new();
         [Dependency] private readonly ISerializationManager _serialization = default!;
